@@ -1,0 +1,686 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*{
+    color: #2E87FF;
+    transition: all .3s linear;
+    text-decoration: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+
+h1, h2, h3 ,h4, h5 {
+    margin-top: 0;
+    font-family: 'RatherLoud';
+    font-weight: 400;
+}
+h3 {
+    font-size: 90px;
+    margin-bottom: 30px;
+    text-wrap: pretty;
+}
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+body{
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Monserrat', sans-serif;
+}
+.d-flex {
+    display: flex;
+}
+.hero{
+    background: url('/junior/assets/images/abc-background.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 15px;
+}
+.pravila header{
+    margin: 0;
+    padding-top: 0;
+}
+.pravila .navmeni a {
+    color: #fff;
+    background-color: #2E87FF;
+}
+.pravila-natjecaja {
+    max-width: 880px;
+    margin: 60px auto 0 auto;
+}
+.pravila h1 {
+    margin-bottom: 50px;
+    font-size: 90px;
+}
+.pravila h2 {
+    font-size: 48px;
+    margin: 30px 0;
+}
+li {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+.pravila footer {
+    margin-top: 100px;
+}
+.container-fluid{
+    width: 100%;
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 60px 0;
+}
+
+.abclogo { width: auto; }
+
+.navflex {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center ;
+}
+
+.navmeni {
+    display: flex;
+}
+
+.navmeni a {
+    display: flex;
+    font-family: 'Monserrat', sans-serif;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 30px;
+    color: #2E87FF;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.menu-toggle-box {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background: #2E87FF;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 11;
+}
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 35px;
+    width: 30px;
+    height: 25px;
+}
+.menu-toggle .bar {
+    display: none;
+    padding: 2px;
+    position: absolute;
+    border-radius: 20px;
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s;
+}
+.menu-toggle .bar1 {
+    top: 0;
+}
+.menu-toggle .bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-toggle .bar3 {
+    bottom: 0;
+}
+.menu-active .menu-toggle .bar.bar1 {
+    top: 50%;
+    transform: translateY(0) rotate(45deg);
+    left: 0;
+}
+.menu-active .menu-toggle .bar.bar2 {
+    opacity: 0;
+}
+.menu-active .menu-toggle .bar.bar3 {
+    top: 50%;
+    left: 0;
+    bottom: auto;
+    transform: translateY(0) rotate(-45deg);
+}
+.menu-active .menu {
+    opacity: 1;
+    pointer-events: inherit;
+}
+.menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background: #2E87FF;
+    border-radius: 30px;
+    padding: 30px 25px 10px 25px;
+    top: 18px;
+    right: 15px;
+    width: calc(100% - 30px);
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+.menu a {
+    padding: 0;
+    display: block;
+    font-family: 'RatherLoud';
+    line-height: 1.2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    text-wrap: balance;
+}
+.socials a {
+    display: inline-block;
+}
+.small-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.small-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+}
+.menu a:last-of-type {
+    padding-bottom: 30px;
+}
+.menu .terms-menu a:not(:last-child) {
+    padding-bottom: 10px;
+}
+.menu .socials a:not(:last-child) {
+    margin-right: 20px;
+    padding-bottom: 0;
+}
+.menu .socials a img {
+    width: 20px;
+    height: 20px;
+}
+.intro{
+    color: #2E87FF;
+}
+
+.intro p {
+    max-width: 500px;
+    margin-bottom: 50px;
+    padding-left: 100px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 70px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.gallery div {
+    padding: 0 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.h2custom{
+    display: flex;
+    background: url('/junior//assets/images/Prijava.svg');
+    font-family: 'Monserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 194px;
+    height: 101px;
+    font-size: 24px;
+    text-align: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    font-weight: 700;
+}
+/* .h2custom:hover {
+    transform: translateX(100px);
+} */
+
+form {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+form > div {
+    margin-bottom: 0px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.form-group input {
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 0;
+    color: #000;
+    background-color: #DEDEDE;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Monserrat', sans-serif;
+    width: 100%;
+}
+
+.form-group label {
+    font-family: 'RatherLoud';
+    flex: 0 0 auto;
+}
+
+form p {
+    text-wrap: balance;
+    padding: 0;
+}
+
+form label, form h3 {
+    font-size: 44px;
+}
+
+.form-part2 {
+    display: flex;
+    margin: 50px -15px;
+}
+
+.form-part2 > div {
+    padding: 0 15px;
+}
+
+form .checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 0 15px 0;
+}
+
+form .checkbox label {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+form .checkbox input {
+    margin: 0 10px 0 0;
+}
+
+button {
+    border: 0;
+    background-color: #DEDEDE;
+    font-size: 50px;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.spremiprijavu a{
+    padding: 16px 70px;
+    background-color: #2E87FF;
+    color: #fff !important;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.video {
+    max-width: 880px;
+    border-radius: 20px;
+    margin: 50px auto 50px auto;
+    overflow: hidden;
+}
+
+video {
+    height: auto;
+    width: 100%;
+}
+
+.gallery2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+
+}
+
+.single-img {
+    width: 33.333%;
+    padding: 15px;
+    position: relative;
+    z-index: -1;
+}
+
+.single-image-box {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+#galerija .single-image-box span {
+    position: absolute;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(46, 135, 255) 100%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30% 20px 15px 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: .2s all ease-out;
+}
+/* .single-image-box:hover .single-image-box span {
+    opacity: 1;
+} */
+.single-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.footerlogo {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 160px;
+}
+footer p {
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    padding-bottom: 50px;
+    font-weight: 500;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+@media only screen and (max-width: 991px) {
+    .navmeni {
+        display: none;
+    }
+    .menimob {
+        display: block;
+        padding-left: 80px;
+    }
+    .menimob img {
+        width: 45px;
+        background-color: #2E87FF;
+        border-radius: 50%;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h3 {
+        font-size: 60px;
+    }
+    .container-fluid, .container {
+        padding: 0 40px;
+    }
+    header {
+        position: fixed;
+        top: 20px;
+        width: 100%;
+    }
+    .intro p {
+        padding-left: 0;
+        text-wrap: balance;
+        margin-bottom: 27px;
+    }
+    form label, form h3 {
+        font-size: 38px;
+    }
+    .menu {
+        display: block;
+    }
+    .menu a {
+        font-size: 60px;
+        font-weight: 500;
+    }
+    .menu-toggle-box {
+        display: block;
+        height: 70px;
+        width: 70px;
+    }
+    .menu-toggle {
+        display: block;
+        top: 35px;
+        right: 55px;
+        width: 40px;
+        height: 35px;
+
+    }
+    .small-menu a {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+        padding: 25px 25px 0 0;
+    }
+    .menu .socials a img {
+        width: 40px;
+        height: 40px;
+    }
+    .form-part2 {
+        display: block;
+        margin: 30px -15px;
+    }
+    h3 {
+        margin-bottom: 25px;
+        text-wrap: balance;
+    }
+    form p {
+        text-wrap: wrap;
+    }
+    .pravila header {
+        padding-top: 0; 
+    }
+    .pravila-natjecaja {
+        margin-top: 180px;
+    }
+    .pravila h1 {
+        margin-bottom: 0;
+        font-size: 68px;
+    }
+    .pravila h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 16px;
+    }
+    li {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .footerlogo {
+        width: 100px;
+    }
+    .pravila footer {
+    margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container-fluid, .container {
+        padding: 0 25px;
+    }
+    .hero {
+        background: url('/junior/assets/images/abc-background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    section{
+        margin: 40px 0;
+    }
+    .abclogo {
+        width: 50%;
+    }
+    .menu {
+        display: block;
+    }
+    .menu-toggle-box {
+        display: block;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    h3 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .gallery {
+        margin: 0 -5px;
+    }
+    .gallery div {
+        padding: 0 5px;
+    }
+    form {
+        margin-top: 30px;
+    }
+    .form-group input {
+        margin-left: 10px;
+    }
+    form label, form h3{
+        font-size: 30px;
+    }
+    form .checkbox label {
+        font-size: 14px;
+    }
+    .form-part2 {
+        flex-direction: column;
+        margin: 30px -15px;
+    }
+    form .checkbox {
+        margin: 25px 0 5px 0;
+    }
+    button {
+        padding: 0;
+    }
+    .spremiprijavu a {
+        padding: 14px 40px;
+    }
+    .intro p {
+        padding-left: 0;
+        text-wrap: balance;
+        margin-bottom: 27px;
+    }
+    .intro h3 {
+        font-size: 38px;
+    }
+    .h2custom {
+        font-size: 18px;
+        width: 140px;
+        height: 70px;
+    }
+    .d-flex{
+        display: block;
+        font-size: 18px;
+    }
+    .d-flex p{
+        font-size: 18px;
+    }
+    .video {
+        margin-top: 30px;
+    }
+    .gallery2 {
+        margin: 25px -5px 0 -5px;
+    }
+    .single-img {
+        width: 50%;
+        padding: 10px;
+    }
+    .footerlogo {
+        width: 80px;
+    }
+    .pravila .menu-toggle {
+        top: 40px;
+    }
+    .pravila h1 {
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+    .pravila-natjecaja {
+        margin-top: 120px;
+    }
+    .pravila h2 {
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    p {
+        font-size: 16px;
+    }
+    li {
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 15px 0;
+    }
+    .pravila footer {
+        margin-top: 50px;
+    }
+}
+@media screen and (min-width: 800px){
+    #galerija .single-image-box:hover span {
+    transform: translateY(0%);
+    }
+}
+
+
+
+
+@font-face {
+    font-family: 'RatherLoud';
+    src: url('../fonts/RatherLoud_woff.eot');
+    src: url('../fonts/RatherLoud_woff.eot') format('embedded-opentype'),
+         url('../fonts/RatherLoud_woff.woff2') format('woff2'),
+         url('../fonts/RatherLoud_woff.woff') format('woff'),
+         url('../fonts/RatherLoud_woff.ttf') format('truetype'),
+         url('../fonts/RatherLoud_woff.svg#RatherLoud_woff') format('svg');
+}
